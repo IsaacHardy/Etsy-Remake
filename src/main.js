@@ -11,15 +11,15 @@
 	}).then (function (response) {
 		  console.log(response);
 	
-	// Var to select location of our HTML using template to pipe the info
-	var templateString = $('#itemTemplate').text();
-	var templateFunction = _.template(templateString);
+		// Var to select location of our HTML using template to pipe the info
+		var templateString = $('#itemTemplate').text();
+		var templateFunction = _.template(templateString);
 
-	// Function to append each piece of data to html location using the undescore .each method
-  	_.each(response.results, function (item) {
-    	var itemHTML = templateFunction(item);
-    	$('.results').append(itemHTML);
-    	});
+		// Function to append each piece of data to html location using the undescore .each method
+	  	_.each(response.results, function (item) {
+	    	var itemHTML = templateFunction(item);
+	    	$('.results').append(itemHTML);
+	    	});
   	});
 
 }());
